@@ -2,22 +2,22 @@
 
 namespace StateMachines.ApplicationGameStates
 {
-  public class Game
-  {
-    public readonly IGameStateMachine StateMachine;
-
-    public Game(IGameStateMachine gameStateMachine)
+    public class Game
     {
-        StateMachine = gameStateMachine;
-    }
+        public readonly IGameStateMachine StateMachine;
 
-    public void StartGame()
-    {
-        StateMachine.Enter<GameLoadState>();
-    }
+        public Game(IGameStateMachine gameStateMachine)
+        {
+            StateMachine = gameStateMachine;
+        }
 
-    public void Cleanup()
-    {
-    }
+        public void StartGame()
+        {
+            StateMachine.Enter<GameLoadState>();
+        }
+
+        public void Cleanup()
+        {
+        }
     }
 }
